@@ -1,0 +1,54 @@
+#checkbox {
+    display: none;
+}
+
+.toggler {
+    display: block;
+    width: 60px;
+    height: 31px;
+    border: 2px solid #b7bac3;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.ball {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #888a8d;
+    border-radius: 50%;
+    left: 3px;
+    z-index: 10;
+    transition: .5s ease-in-out;
+}
+
+#checkbox:checked+.ball {
+    transform: translate(29px, -50%);
+    background-color: rgb(42, 181, 42);
+}
+
+@keyframes changeBackgroundDark {
+    from {
+        background-color: white;
+    }
+
+    to {
+        background-color: black;
+    }
+
+}
+
+@keyframes changeBackgroundLight {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: white;
+    }
+
+}
